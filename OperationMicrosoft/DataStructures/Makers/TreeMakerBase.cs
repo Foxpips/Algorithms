@@ -1,3 +1,5 @@
+using OperationMicrosoft.DataStructures.Objects;
+
 namespace OperationMicrosoft.DataStructures.Makers
 {
     public abstract class TreeMakerBase<TValue>

@@ -1,25 +1,74 @@
-﻿using NUnit.Framework;
-using OperationMicrosoft.DataStructures;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
+using OperationMicrosoft.Algorithms.Search;
 using OperationMicrosoft.DataStructures.Makers;
+using OperationMicrosoft.DataStructures.Objects;
 
 namespace OperationMicrosoft.Tests
 {
     public class BinaryTreeTests
     {
-        //            CreateTree(1, 2, 3, 4, 5, 6, 7, 8);
-        //             1
-        //           /   \
-        //          2     3
+        private TreeNode<string> _root;
+        private readonly TreeSearcher<string> _treeSearcher = new TreeSearcher<string>();
+
+        [SetUp]
+        public void SetUp()
+        {
+            var binaryTreeMaker = new BinaryTreeMaker<string>(new[] {"F", "D", "H", "B", "E", "G", "I", "A", "C"});
+            _root = binaryTreeMaker.Root;
+        }
+
+        //             F    
+        //           /   \ 
+        //          D     H
         //         / \   / \
-        //        4   5 6   7
-        //       /
-        //      8
+        //        B   E G   I
+        //       / \
+        //      A   C
+        //         / \
+        //      (CL) (CR)
+        //
 
         [Test]
-        public void Create_Binary_Tree()
+        public void InOrder_Search()
         {
-            int[] values = {1, 2, 3, 4, 5, 6, 7, 8};
-            var tree = new BinaryTreeMaker<int>().Create(values);
+            _treeSearcher.InOrderSearch(_root);
+            var enumerator = _treeSearcher.GetEnumerator();
+
+            while (enumerator.MoveNext())
+            {
+                Console.WriteLine(enumerator.Current.Value);
+            }
+        }
+
+        [Test]
+        public void Pre_Order_Search()
+        {
+            _treeSearcher.PreOrderSearch(_root);
+        }
+
+        [Test]
+        public void Post_Order_Search()
+        {
+            _treeSearcher.PostOrderSearch(_root);
+        }
+
+        [Test]
+        public void InOrder_Search_UnevenTree()
+        {
+            _root.Left.Left.Right.Left = new TreeNode<string>("CL");
+            _root.Left.Left.Right.Right = new TreeNode<string>("CR");
+            _treeSearcher.InOrderSearch(_root);
+        }
+
+        [Test]
+        public void PostOrder_Search_UnevenTree()
+        {
+            _root.Left.Left.Right.Left = new TreeNode<string>("CL");
+            _root.Left.Left.Right.Right = new TreeNode<string>("CR");
+            _treeSearcher.PostOrderSearch(_root);
         }
     }
 }

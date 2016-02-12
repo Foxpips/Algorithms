@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
 using OperationMicrosoft.Algorithms.Search;
 using OperationMicrosoft.DataStructures.Makers;
@@ -17,6 +15,7 @@ namespace OperationMicrosoft.Tests
         public void SetUp()
         {
             var binaryTreeMaker = new BinaryTreeMaker<string>(new[] {"F", "D", "H", "B", "E", "G", "I", "A", "C"});
+            var binaryTreeMaker2 = new BinaryTreeMaker<int>(new[] {1,2,3});
             _root = binaryTreeMaker.Root;
         }
 

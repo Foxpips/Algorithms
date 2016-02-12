@@ -48,7 +48,7 @@
     <Compile Include="Algorithms\Tree\MorrisTreeSearcher.cs" />
     <Compile Include="DataStructures\Makers\BinaryTreeMaker.cs" />
     <Compile Include="DataStructures\Objects\ListNode.cs" />
-    <Compile Include="DataStructures\Makers\GNodeList.cs" />
+    <Compile Include="DataStructures\Makers\LinkedList.cs" />
     <Compile Include="Tests\NodeListTests.cs" />
     <Compile Include="DataStructures\Objects\TreeNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

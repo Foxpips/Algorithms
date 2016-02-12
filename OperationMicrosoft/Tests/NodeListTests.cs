@@ -10,33 +10,37 @@ namespace OperationMicrosoft.Tests
         [Test]
         public void MethodUnderTest_TestedBehavior_ExpectedResult()
         {
-            var sNodeList = new GNodeList<object>();
-            sNodeList.Add(new ListNode<object>(1));
-            sNodeList.Add(new ListNode<object>(2));
-            sNodeList.Add(new ListNode<object>(3));
-            sNodeList.Add(new ListNode<object>(4));
-            sNodeList.Add(new ListNode<object>(5));
-            sNodeList.Add(new ListNode<object>(6));
-            sNodeList.Add(new ListNode<object>("d"));
-            sNodeList.Add(new ListNode<object>("g"));
-            sNodeList.AddAfter(3, new ListNode<object>("B"));
+            var nodeList = new LinkedList<object>();
+            nodeList.Add(new ListNode<object>(1));
+            nodeList.Add(new ListNode<object>(2));
+            nodeList.Add(new ListNode<object>(3));
+            nodeList.Add(new ListNode<object>(4));
+            nodeList.Add(new ListNode<object>(5));
+            nodeList.Add(new ListNode<object>(6));
+            nodeList.Add(new ListNode<object>("d"));
+            nodeList.Add(new ListNode<object>("g"));
+            nodeList.AddAfter(3, new ListNode<object>("B"));
+            nodeList.AddAfter("g", new ListNode<object>("uber"));
 
-            Console.WriteLine("The list has {0} elements!", sNodeList.ListSize);
-            sNodeList.Traverse();
-            sNodeList.Reverse();
-            sNodeList.Traverse();
+            Console.WriteLine(nodeList.Tail);
 
-            Assert.That(sNodeList.ListSize, Is.EqualTo(8));
-            Assert.That(sNodeList.Find("g"), Is.True);
 
-            sNodeList.Remove("d");
-            sNodeList.Remove("g");
+            Console.WriteLine("The list has {0} elements!", nodeList.ListSize);
+            nodeList.Traverse();
+            nodeList.Reverse();
+            nodeList.Traverse();
 
-            Assert.That(sNodeList.ListSize, Is.EqualTo(6));
-            Assert.That(sNodeList.Find("g"), Is.False);
+            Assert.That(nodeList.ListSize, Is.EqualTo(10));
+            Assert.That(nodeList.Contains("g"), Is.True);
 
-            sNodeList.Reverse();
-            sNodeList.Traverse();
+            nodeList.Remove("d");
+            nodeList.Remove("g");
+
+            Assert.That(nodeList.ListSize, Is.EqualTo(8));
+            Assert.That(nodeList.Contains("g"), Is.False);
+
+            nodeList.Reverse();
+            nodeList.Traverse();
         }
     }
 }

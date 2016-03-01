@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\ReverseByte\ByteReverser.cs" />
     <Compile Include="Algorithms\Search\NumberFinder.cs" />
     <Compile Include="Algorithms\Search\TreeSearcher.cs" />
     <Compile Include="Algorithms\Tree\MorrisTreeSearcher.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Tests\BinaryTreeTests.cs" />
     <Compile Include="Tests\FindSmallestNumberTests.cs" />
     <Compile Include="Tests\MorrisTreeTests.cs" />
+    <Compile Include="Tests\ReverseByteTests.cs" />
     <Compile Include="Tests\Structer.cs" />
   </ItemGroup>
   <ItemGroup>

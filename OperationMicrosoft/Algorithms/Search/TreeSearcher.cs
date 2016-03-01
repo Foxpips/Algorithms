@@ -30,39 +30,39 @@ namespace OperationMicrosoft.Algorithms.Search
             }
         }
 
-        internal void PreOrderSearch(TreeNode<TType> root)
+        internal void PreOrderSearch(TreeNode<TType> currentNode)
         {
-            if (root == null)
+            if (currentNode == null)
             {
                 return;
             }
 
-            Console.WriteLine(root.Value);
-            PreOrderSearch(root.Left);
-            PreOrderSearch(root.Right);
-        }
-
-        internal void InOrderSearch(TreeNode<TType> root)
-        {
-            TraverseInOrder(root);
-        }
-
-        public void PostOrderSearch(TreeNode<TType> root)
-        {
-            TraversePostOrder(root);
-        }
-
-        internal void TraverseInOrder(TreeNode<TType> currentNode)
-        {
-            if (currentNode.Left != null) TraverseInOrder(currentNode.Left);
             PrintAndAddToList(currentNode);
-            if (currentNode.Right != null) TraverseInOrder(currentNode.Right);
+            PreOrderSearch(currentNode.Left);
+            PreOrderSearch(currentNode.Right);
         }
 
-        internal void TraversePostOrder(TreeNode<TType> currentNode)
+        internal void InOrderSearch(TreeNode<TType> currentNode)
         {
-            if (currentNode.Left != null) TraversePostOrder(currentNode.Left);
-            if (currentNode.Right != null) TraversePostOrder(currentNode.Right);
+            if (currentNode == null)
+            {
+                return;
+            }
+
+            InOrderSearch(currentNode.Left);
+            PrintAndAddToList(currentNode);
+            InOrderSearch(currentNode.Right);
+        }
+
+        internal void PostOrderSearch(TreeNode<TType> currentNode)
+        {
+            if (currentNode == null)
+            {
+                return;
+            }
+
+            PostOrderSearch(currentNode.Left);
+            PostOrderSearch(currentNode.Right);
             PrintAndAddToList(currentNode);
         }
 

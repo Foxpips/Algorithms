@@ -34,6 +34,7 @@ namespace OperationMicrosoft.Tests
         public void InOrder_Search()
         {
             _treeSearcher.InOrderSearch(_root);
+
             var enumerator = _treeSearcher.GetEnumerator();
 
             while (enumerator.MoveNext())
@@ -68,6 +69,14 @@ namespace OperationMicrosoft.Tests
             _root.Left.Left.Right.Left = new TreeNode<string>("CL");
             _root.Left.Left.Right.Right = new TreeNode<string>("CR");
             _treeSearcher.PostOrderSearch(_root);
+        }
+
+        [Test]
+        public void Pre_Order_Search_UnevenTree()
+        {
+            _root.Left.Left.Right.Left = new TreeNode<string>("CL");
+            _root.Left.Left.Right.Right = new TreeNode<string>("CR");
+            _treeSearcher.PreOrderSearch(_root);
         }
     }
 }

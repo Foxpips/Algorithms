@@ -1,4 +1,4 @@
-﻿namespace OperationMicrosoft.DataStructures.Objects
+﻿namespace OperationMicrosoft.DataStructures.Objects.Nodes
 {
     public class ListNode<TValue>
     {

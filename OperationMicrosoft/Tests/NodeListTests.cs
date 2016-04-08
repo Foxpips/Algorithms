@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 using OperationMicrosoft.DataStructures.Makers;
-using OperationMicrosoft.DataStructures.Objects;
+using OperationMicrosoft.DataStructures.Objects.Nodes;
 
 namespace OperationMicrosoft.Tests
 {

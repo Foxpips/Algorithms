@@ -1,4 +1,4 @@
-﻿using OperationMicrosoft.DataStructures.Objects;
+﻿using OperationMicrosoft.DataStructures.Objects.Nodes;
 
 namespace OperationMicrosoft.Algorithms.Tree
 {

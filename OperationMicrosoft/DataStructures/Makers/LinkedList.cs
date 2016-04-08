@@ -1,5 +1,5 @@
 ﻿using System;
-using OperationMicrosoft.DataStructures.Objects;
+using OperationMicrosoft.DataStructures.Objects.Nodes;
 
 namespace OperationMicrosoft.DataStructures.Makers
 {

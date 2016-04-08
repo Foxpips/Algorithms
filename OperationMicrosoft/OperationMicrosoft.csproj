@@ -31,12 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,21 +49,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\ReverseByte\ByteReverser.cs" />
+    <Compile Include="DataStructures\Objects\Shapes\BaseShape.cs" />
+    <Compile Include="DataStructures\Objects\Shapes\IShape.cs" />
+    <Compile Include="DataStructures\Objects\Shapes\LShape.cs" />
+    <Compile Include="Algorithms\ShapeRotater\ShapeRotater.cs" />
+    <Compile Include="Tests\ShapeTester.cs" />
+    <Compile Include="Tests\Extensions.cs" />
     <Compile Include="Algorithms\Search\NumberFinder.cs" />
     <Compile Include="Algorithms\Search\TreeSearcher.cs" />
     <Compile Include="Algorithms\Tree\MorrisTreeSearcher.cs" />
     <Compile Include="DataStructures\Makers\BinaryTreeMaker.cs" />
-    <Compile Include="DataStructures\Objects\ListNode.cs" />
+    <Compile Include="DataStructures\Objects\Nodes\ListNode.cs" />
     <Compile Include="DataStructures\Makers\LinkedList.cs" />
     <Compile Include="Tests\DeepCopy.cs" />
     <Compile Include="Tests\NodeListTests.cs" />
-    <Compile Include="DataStructures\Objects\TreeNode.cs" />
+    <Compile Include="DataStructures\Objects\Nodes\TreeNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\BinaryTreeTests.cs" />
     <Compile Include="Tests\FindSmallestNumberTests.cs" />
     <Compile Include="Tests\MorrisTreeTests.cs" />
     <Compile Include="Tests\ReverseByteTests.cs" />
     <Compile Include="Tests\Structer.cs" />
+    <Compile Include="Tests\TestAbstract.cs" />
+    <Compile Include="Tests\TestInterfaceList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

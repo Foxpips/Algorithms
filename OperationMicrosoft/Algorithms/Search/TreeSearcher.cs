@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using OperationMicrosoft.DataStructures.Objects;
+using OperationMicrosoft.DataStructures.Objects.Nodes;
 
 namespace OperationMicrosoft.Algorithms.Search
 {

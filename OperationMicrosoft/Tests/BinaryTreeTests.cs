@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using OperationMicrosoft.Algorithms.Search;
 using OperationMicrosoft.DataStructures.Makers;
-using OperationMicrosoft.DataStructures.Objects;
+using OperationMicrosoft.DataStructures.Objects.Nodes;
 
 namespace OperationMicrosoft.Tests
 {

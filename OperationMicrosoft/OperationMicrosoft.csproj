@@ -53,6 +53,9 @@
     <Compile Include="DataStructures\Objects\Shapes\IShape.cs" />
     <Compile Include="DataStructures\Objects\Shapes\LShape.cs" />
     <Compile Include="Algorithms\ShapeRotater\ShapeRotater.cs" />
+    <Compile Include="Tests\ContraCoVariance.cs" />
+    <Compile Include="Tests\EnumTester.cs" />
+    <Compile Include="Tests\ListTester.cs" />
     <Compile Include="Tests\ShapeTester.cs" />
     <Compile Include="Tests\Extensions.cs" />
     <Compile Include="Algorithms\Search\NumberFinder.cs" />
@@ -72,6 +75,7 @@
     <Compile Include="Tests\Structer.cs" />
     <Compile Include="Tests\TestAbstract.cs" />
     <Compile Include="Tests\TestInterfaceList.cs" />
+    <Compile Include="Tests\WordDocTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

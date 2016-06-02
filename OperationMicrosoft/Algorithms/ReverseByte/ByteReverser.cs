@@ -23,15 +23,7 @@ namespace OperationMicrosoft.Algorithms.ReverseByte
             while (counter-- > 0)
             {
                 result <<= 1;
-
-                var binary1 = ConvertToBinary(val);
-                Console.WriteLine(binary1);
-
                 result |= (byte) (val & 1);
-
-                var binary2 = ConvertToBinary(val & 1);
-                Console.WriteLine(binary2);
-
                 val >>= 1;
             }
 

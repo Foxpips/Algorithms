@@ -4,6 +4,9 @@ namespace OperationMicrosoft.Tests
 {
     public class ContraCoVariance
     {
+
+        IChocolateFactory<MarshMallow> MallowFac = new CharliesChocolateFactory();
+            
         [Test]
         public void TestCova()
         {
